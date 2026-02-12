@@ -2,7 +2,7 @@
 
 A retrieval-augmented generation (RAG) system that extracts structured vehicle specifications from automotive service manual PDFs using LLMs and semantic search.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [System Architecture](#system-architecture)
@@ -15,7 +15,7 @@ A retrieval-augmented generation (RAG) system that extracts structured vehicle s
 - [Limitations](#limitations)
 - [Installation](#installation)
 
-## 🎯 Overview
+## Overview
 
 This system addresses the challenge of automatically extracting technical specifications (torque values, fluid capacities, part numbers, etc.) from automotive service manuals. It uses a combination of:
 
@@ -25,7 +25,7 @@ This system addresses the challenge of automatically extracting technical specif
 - **Large Language Models** for intelligent information extraction
 - **Structured output** in JSON format for downstream applications
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 PDF Document → Text Extraction → Chunking → Embeddings → Vector Store
@@ -47,7 +47,7 @@ User Query → Embedding → Similarity Search → Context Retrieval
 6. **LLM Extraction**: Use Mistral-7B-Instruct to extract structured data from retrieved context
 7. **Output Formatting**: Return results in standardized JSON format
 
-## 🛠️ Technologies & Tools
+## Technologies & Tools
 
 ### Core Libraries
 
@@ -70,7 +70,7 @@ User Query → Embedding → Similarity Search → Context Retrieval
 - **Mistral-7B-Instruct**: Open-source instruction-tuned model with strong performance on extraction tasks, can run on consumer hardware with quantization
 - **4-bit Quantization**: Reduces model memory footprint by ~75% while maintaining accuracy, enabling 7B models on Google Colab T4 GPU
 
-## 💡 Implementation Details
+## Implementation Details
 
 ### 1. PDF Text Extraction
 
@@ -255,7 +255,7 @@ JSON Output:
 - Error schema prevents model from hallucinating when uncertain
 - Technical specification focus guides the model to look for numbers + units
 
-## 📊 Output Format
+## Output Format
 
 ### Standard Output Schema
 
@@ -285,7 +285,7 @@ JSON Output:
 }
 ```
 
-## 🚀 Usage
+## Usage
 
 ### Setup and Execution
 
@@ -344,7 +344,7 @@ The system includes robust error handling for:
 - **Multiple Results**: Attempts to parse first valid JSON object
 - **API/Model Errors**: Catches and logs exceptions
 
-## 📈 Results
+## Results
 
 ### Sample Extraction Results
 
@@ -379,7 +379,7 @@ The system includes robust error handling for:
 - Some queries returned "not found" when information wasn't in the PDF
 - JSON parsing occasionally failed when LLM returned multiple results
 
-## 🔄 Ideas for Improvement
+## Ideas for Improvement
 
 ### 1. Advanced PDF Processing
 
@@ -633,7 +633,7 @@ if st.button("Extract"):
 
 **Impact:** Makes tool accessible to mechanics, technicians
 
-## ⚠️ Limitations
+## Limitations
 
 ### Current Implementation Constraints
 
@@ -692,7 +692,7 @@ if st.button("Extract"):
 - **No Incremental Updates**: Requires full re-processing for document changes
   - Solution: Implement document versioning and delta updates
 
-## 📦 Installation
+## Installation
 
 ### Requirements
 
@@ -808,7 +808,7 @@ print(f"GPU available: {torch.cuda.is_available()}")
 # Current code strips markdown and retries
 ```
 
-## 🔍 Technical Deep Dive
+## Technical Deep Dive
 
 ### Why 4-bit Quantization Works
 
@@ -994,10 +994,6 @@ For this educational project, open-source is ideal. For production with 1000+ qu
 - **RAG**: "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (2020)
 - **QLoRA**: "QLoRA: Efficient Finetuning of Quantized LLMs" (2023)
 
-### Related Projects
-- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) - Autonomous AI agents
-- [LlamaIndex](https://github.com/run-llama/llama_index) - Alternative to LangChain
-- [Haystack](https://github.com/deepset-ai/haystack) - NLP framework with RAG
 
 ## 🤝 Contributing & Future Work
 
