@@ -1052,5 +1052,5 @@ For this educational project, open-source is ideal. For production with 1000+ qu
 ---
 
 **Built with:** Google Colab, PyMuPDF, LangChain, Mistral-7B, BGE Embeddings, FAISS  
-**Author:** [Your Name]  
+**Author:** Gaurav Koli  
 **Last Updated:** February 2024
